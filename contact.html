@@ -5,7 +5,7 @@
 <title>Contact | Dr. Ajay Shrikrishna Chowbe</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Contact Dr. Ajay Shrikrishna Chowbe – Principal & Educationist for academic consultation, CBSE guidance, and professional interaction.">
+<meta name="description" content="Contact Dr. Ajay Shrikrishna Chowbe – Principal & Educationist for academic consultation and professional interaction.">
 
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -13,7 +13,6 @@
 
 <body>
 
-<!-- ================= HEADER ================= -->
 <header>
   <img src="assets/images/profile.jpg" alt="Dr. Ajay Shrikrishna Chowbe">
   <h1>Dr. Ajay Shrikrishna Chowbe</h1>
@@ -21,7 +20,6 @@
   <p>Amravati, Maharashtra, India</p>
 </header>
 
-<!-- ================= NAVIGATION ================= -->
 <nav>
 <ul>
   <li><a href="index.html">Home</a></li>
@@ -34,112 +32,98 @@
 </ul>
 </nav>
 
-<!-- ================= MAIN CONTENT ================= -->
 <div class="container">
 
-<!-- INTRO -->
-<div class="section">
-<h2>Get in Touch</h2>
-<p>
-For academic consultation, school leadership guidance,
-CBSE affiliation and inspection support, or professional
-interaction, please feel free to connect using the
-details below.
-</p>
-</div>
-
-<!-- CONTACT DETAILS -->
+<!-- CONTACT INFO -->
 <div class="section">
 <h2>Contact Information</h2>
-
 <p><strong>Email:</strong> ajay650757@gmail.com</p>
 <p><strong>Mobile:</strong> +91-9860203952 | +91-7620889664</p>
 <p><strong>Location:</strong> Amravati, Maharashtra, India</p>
 
-<p>
-<a href="https://wa.me/919860203952" target="_blank" class="button">
-<i class="fab fa-whatsapp"></i> Chat on WhatsApp
+<a href="assets/visiting-card.pdf" class="button" download>
+<i class="fas fa-id-card"></i> Download Visiting Card
 </a>
-</p>
-
-<p>
-<a href="mailto:ajay650757@gmail.com" class="button">
-<i class="fas fa-envelope"></i> Send Email
-</a>
-</p>
 </div>
 
-<!-- CONTACT FORM (STATIC - GITHUB SAFE) -->
+<!-- OFFICE HOURS -->
 <div class="section">
-<h2>Enquiry / Appointment Request</h2>
+<h2>Office Hours & Availability</h2>
+<ul>
+<li><strong>Monday – Friday:</strong> 10:00 AM – 5:00 PM</li>
+<li><strong>Saturday:</strong> 10:00 AM – 2:00 PM</li>
+<li><strong>Sunday:</strong> By prior appointment</li>
+</ul>
 <p>
-Please use this form to submit your enquiry.
-(For faster response, WhatsApp or email is recommended.)
+For urgent matters, WhatsApp communication is preferred.
 </p>
 
-<form>
+<a href="https://wa.me/919860203952" target="_blank" class="button">
+<i class="fab fa-whatsapp"></i> WhatsApp Now
+</a>
+</div>
+
+<!-- WORKING FORM -->
+<div class="section">
+<h2>Appointment / Enquiry Form</h2>
+
+<form action="https://formspree.io/f/abcdwxyz" method="POST">
 <label>Full Name</label>
-<input type="text" placeholder="Enter your full name" required>
+<input type="text" name="name" required>
 
-<label>Email Address</label>
-<input type="email" placeholder="Enter your email" required>
+<label>Email</label>
+<input type="email" name="email" required>
 
-<label>Mobile Number</label>
-<input type="tel" placeholder="Enter your mobile number" required>
+<label>Mobile</label>
+<input type="tel" name="phone" required>
 
-<label>Purpose of Contact</label>
-<select>
+<label>Purpose</label>
+<select name="purpose">
   <option>Academic Consultation</option>
   <option>School Leadership Guidance</option>
   <option>CBSE Affiliation / Inspection</option>
   <option>Professional Meeting</option>
-  <option>Other</option>
 </select>
 
 <label>Message</label>
-<textarea rows="4" placeholder="Write your message"></textarea>
+<textarea name="message" rows="4"></textarea>
 
-<button type="submit" class="button">Submit Enquiry</button>
+<button type="submit" class="button">Submit Request</button>
 </form>
 
-<p style="margin-top:10px;font-size:14px;">
-⚠️ Note: This is a static form for GitHub Pages.
-For guaranteed response, please use email or WhatsApp.
+<p style="font-size:14px;margin-top:10px;">
+✔ You will receive an email notification after submission.
 </p>
 </div>
 
-<!-- SOCIAL LINKS -->
+<!-- GOOGLE MAP -->
 <div class="section">
-<h2>Professional Presence</h2>
-<p>
-<a href="https://www.linkedin.com" target="_blank">
-<i class="fab fa-linkedin fa-2x"></i>
-</a>
-&nbsp;&nbsp;
-<a href="https://scholar.google.com" target="_blank">
-<i class="fas fa-graduation-cap fa-2x"></i>
-</a>
-</p>
+<h2>Location Map</h2>
+
+<iframe
+  src="https://www.google.com/maps?q=Amravati,Maharashtra&output=embed"
+  width="100%"
+  height="300"
+  style="border:0;border-radius:12px;"
+  loading="lazy">
+</iframe>
 </div>
 
 </div>
 
-<!-- ================= FOOTER ================= -->
 <footer>
 © 2026 Dr. Ajay Shrikrishna Chowbe | Contact
 </footer>
 
-<!-- ================= SCROLL ANIMATION ================= -->
+<!-- SCROLL ANIMATION -->
 <script>
-const sections = document.querySelectorAll('.section');
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add('show');
-    }
-  });
+const sections=document.querySelectorAll('.section');
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add('show')}
+ })
 },{threshold:0.15});
-sections.forEach(sec=>observer.observe(sec));
+sections.forEach(s=>observer.observe(s));
 </script>
 
 </body>
