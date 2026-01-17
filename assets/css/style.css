@@ -33,6 +33,11 @@ body.director-bg {
   animation: gradientMove 18s ease infinite;
   overflow-x: hidden;
 }
+.container, header, nav, footer {
+  position: relative;
+  z-index: 1;
+}
+
 
 /* Floating subtle shapes */
 body.director-bg::before,
