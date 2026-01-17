@@ -5,12 +5,16 @@
 <title>Gallery | Dr. Ajay Shrikrishna Chowbe</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Gallery of certificates, academic events, inspections, seminars, and professional milestones of Dr. Ajay Shrikrishna Chowbe.">
+<meta name="description"
+      content="Professional gallery of certificates, academic events, CBSE inspections, seminars, and institutional activities of Dr. Ajay Shrikrishna Chowbe.">
 
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
+<body class="director-bg">
+
+<!-- ================= PARTICLE BACKGROUND ================= -->
+<div id="particles-js"></div>
 
 <!-- ================= HEADER ================= -->
 <header>
@@ -40,66 +44,119 @@
 <div class="section">
 <h2>Academic & Professional Gallery</h2>
 <p>
-This gallery presents a visual documentation of
-<strong>academic milestones, awards, certificates, institutional events,
-seminars, inspections, and professional engagements</strong> of
-Dr. Ajay Shrikrishna Chowbe. Each image reflects a commitment
-to excellence, leadership, and service in education.
+This gallery presents a visual record of
+<strong>academic achievements, institutional leadership,
+CBSE inspections, seminars, and professional engagements</strong>.
+Each image reflects commitment to quality education,
+ethical leadership, and institutional excellence.
 </p>
 </div>
 
 <!-- CERTIFICATES -->
 <div class="section">
 <h2>Certificates & Honors</h2>
-
 <div class="gallery">
   <img src="assets/images/cert1.jpg" alt="Academic Certificate">
   <img src="assets/images/cert2.jpg" alt="Award Certificate">
   <img src="assets/images/cert3.jpg" alt="Recognition Certificate">
 </div>
-
-<p>
-Official certificates and recognitions received for
-academic leadership, institutional development,
-and contribution to the field of education.
-</p>
 </div>
 
 <!-- EVENTS -->
 <div class="section">
 <h2>Academic Events & Seminars</h2>
-
 <div class="gallery">
   <img src="assets/images/event1.jpg" alt="Academic Seminar">
   <img src="assets/images/event2.jpg" alt="Education Conference">
   <img src="assets/images/event3.jpg" alt="Workshop Session">
 </div>
-
-<p>
-Participation in seminars, workshops, conferences,
-and professional development programs focusing on
-educational leadership and innovation.
-</p>
 </div>
 
 <!-- INSPECTIONS -->
 <div class="section">
 <h2>CBSE Inspections & Institutional Visits</h2>
-
 <div class="gallery">
   <img src="assets/images/inspection1.jpg" alt="CBSE Inspection">
   <img src="assets/images/inspection2.jpg" alt="School Inspection Visit">
 </div>
-
-<p>
-Professional involvement in CBSE inspection processes,
-institutional evaluations, and academic advisory visits.
-</p>
 </div>
 
-<!-- SCHOOL LIFE -->
+<!-- SCHOOL ACTIVITIES -->
 <div class="section">
 <h2>School Activities & Student Engagement</h2>
-
 <div class="gallery">
-  <img src="assets/images/school1.jpg" alt="School Act
+  <img src="assets/images/school1.jpg" alt="School Activity">
+  <img src="assets/images/school2.jpg" alt="Student Interaction">
+  <img src="assets/images/school3.jpg" alt="School Function">
+</div>
+</div>
+
+<!-- PURPOSE -->
+<div class="section">
+<h2>Significance of the Gallery</h2>
+<ul>
+<li>Documentation of professional milestones</li>
+<li>Evidence of academic leadership and governance</li>
+<li>Visual reflection of institutional culture</li>
+<li>Commitment to holistic and values-based education</li>
+</ul>
+</div>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+© 2026 Dr. Ajay Shrikrishna Chowbe | Gallery
+</footer>
+
+<!-- ================= PARTICLES SCRIPT ================= -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 45, density: { enable: true, value_area: 800 } },
+    color: { value: "#3a7bd5" },
+    shape: { type: "circle" },
+    opacity: { value: 0.25 },
+    size: { value: 3, random: true },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: "#3a7bd5",
+      opacity: 0.15,
+      width: 1
+    },
+    move: { enable: true, speed: 1.2 }
+  },
+  interactivity: {
+    events: {
+      onhover: { enable: false },
+      onclick: { enable: false }
+    }
+  },
+  retina_detect: true
+});
+</script>
+
+<!-- ================= SCROLL ANIMATION ================= -->
+<script>
+const sections = document.querySelectorAll('.section');
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+},{threshold:0.15});
+sections.forEach(sec=>observer.observe(sec));
+</script>
+  <!-- ================= LIGHTBOX ================= -->
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-img" id="lightbox-img">
+  <div class="lightbox-caption" id="lightbox-caption"></div>
+</div>
+
+
+</body>
+</html>
