@@ -2,6 +2,25 @@
    DIRECTOR PAGE BACKGROUND
 ================================ */
 
+/* ===============================
+   PARTICLE BACKGROUND
+================================ */
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background: linear-gradient(
+    120deg,
+    #eef3fb,
+    #f7faff,
+    #eef3fb
+  );
+}
+
 body.director-bg {
   position: relative;
   background: linear-gradient(
