@@ -144,13 +144,23 @@ academic and administrative experience in CBSE & ICSE schools across India.
 
 <!-- ================= THANK YOU POPUP ================= -->
 <div id="thankYouModal" class="thank-you-modal">
-  <div class="thank-you-box">
-    <h2>Thank You!</h2>
-    <p>Your appointment request has been submitted successfully.<br>
-    We will contact you shortly.</p>
-   <button class="button" onclick="closeThankYou()">OK</button>
+  <div class="thank-you-box success-animate">
+
+    <!-- SUCCESS ICON -->
+    <div class="success-icon">
+      ✓
+    </div>
+
+    <h2>Request Submitted</h2>
+    <p>
+      Your appointment request has been sent successfully.<br>
+      We will contact you shortly.
+    </p>
+
+    <button class="button" onclick="closeThankYou()">OK</button>
   </div>
 </div>
+
 
   <script>
 const sections = document.querySelectorAll('.section, .section-card');
@@ -191,6 +201,7 @@ function closeThankYou(){
 
 </body>
 </html>
+
 
 
 
