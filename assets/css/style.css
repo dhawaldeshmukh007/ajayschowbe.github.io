@@ -26,6 +26,52 @@ const lightboxImg = document.getElementById("lightbox-img");
 const lightboxCaption = document.getElementById("lightbox-caption");
 const closeBtn = document.querySelector(".lightbox-close");
 
+<script>
+/* ===============================
+   SCROLL ANIMATION (existing)
+================================ */
+const sections = document.querySelectorAll('.section, .section-card');
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+},{threshold:0.15});
+sections.forEach(sec=>observer.observe(sec));
+
+/* ===============================
+   AUTO SCROLL TO APPOINTMENT
+================================ */
+document.querySelectorAll('a[href="#appointment"]').forEach(link=>{
+  link.addEventListener('click', function(e){
+    e.preventDefault();
+    document.getElementById('appointment').scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
+/* ===============================
+   THANK YOU POPUP
+================================ */
+const form = document.querySelector("#appointment form");
+const modal = document.getElementById("thankYouModal");
+
+if(form){
+  form.addEventListener("submit", function(e){
+    e.preventDefault(); // prevent reload
+    modal.style.display = "flex";
+    form.reset();
+  });
+}
+
+function closeThankYou(){
+  modal.style.display = "none";
+}
+</script>
+
+
 document.querySelectorAll(".gallery img").forEach(img => {
   img.addEventListener("click", () => {
     lightbox.style.display = "flex";
